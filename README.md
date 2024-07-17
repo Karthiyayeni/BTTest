@@ -1,4 +1,4 @@
-Session Log Processor Application
+**Session Log Processor Application**
 This application processes session log data to calculate session durations per user.
 
 Building the Application
