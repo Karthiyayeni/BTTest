@@ -16,14 +16,14 @@ public class SessionLogProcessorTest {
 	
 	 @Test
 	    public void testProcessLog_NullFilePath() throws IOException, ParseException {
-	            SessionLogProcessor.ProcessLog(null);
+	            SessionLogProcessor.processLog(null);
 	        
 	    }
 	 
 	 @Test
 	    public void testProcessLog_NonNullFilePath() throws IOException, ParseException {
 	        	String dir = System.getProperty("user.dir");
-	            SessionLogProcessor.ProcessLog(dir+"/src/main/resources/sessiondatalog.txt");
+	            SessionLogProcessor.processLog(dir+"/src/main/resources/sessiondatalog.txt");
 	        
 	    }
 	 
