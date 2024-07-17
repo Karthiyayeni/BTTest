@@ -16,13 +16,13 @@ public class SessionLogProcessor {
     private static final String START = "Start";
     private static final String END = "End";
     
-    public static void ProcessLog(String filePath) throws IOException, ParseException {
+    public static void processLog(String filePath) throws IOException, ParseException {
     	if(filePath != null) {
-    	LogProcessor(filePath);
+    	logProcessor(filePath);
     	}
     }
 
-    private static void LogProcessor(String filePath) throws IOException, ParseException {
+    private static void logProcessor(String filePath) throws IOException, ParseException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         String line;
         Map<String, List<Session>> userSessions = new HashMap<>();
@@ -138,7 +138,7 @@ public class SessionLogProcessor {
 
         String logFilePath = args[0];
         try {
-            ProcessLog(logFilePath);
+            processLog(logFilePath);
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
